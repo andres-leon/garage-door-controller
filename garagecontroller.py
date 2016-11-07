@@ -1,6 +1,6 @@
 #!/usr/bin/env python2.7
 # Purpose: Process MQTT trigger message from Home Assistant RPi to open garage door.
-# Soruce: https://hackaday.io/project/9901/instructions
+# Original Source: https://hackaday.io/project/9901/instructions
 
 import sys
 import mosquitto
@@ -95,8 +95,8 @@ if __name__ == "__main__":
 		mqttc.on_connect = on_connect
 		mqttc.on_publish = on_publish
 		mqttc.on_subscribe = on_subscribe
-		mqttc.username_pw_set("mqttuser", "mqttpassword")
-		mqttc.connect("192.168.1.114", 1883, 60)
+		mqttc.username_pw_set(<username>, <password>)
+		mqttc.connect(<mqtt broker address>, 1883, 60)
 		mqttc.subscribe("garage/#", 0)
 		publishDoorStatus()
 		
