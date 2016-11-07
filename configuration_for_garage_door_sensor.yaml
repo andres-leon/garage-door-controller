@@ -1,7 +1,8 @@
+# This goes in your Home Assistant configuration.yaml (as of version 0.32.1). 
 sensor garagedoor_status2:
   - platform: mqtt
     state_topic: "garage/status2"
-    name: "Garage Door Status2"
+    name: "Garage Door Status"
     value_template: '{{ value_json.status }}'
   - platform: mqtt
     state_topic: "garage/status2"
