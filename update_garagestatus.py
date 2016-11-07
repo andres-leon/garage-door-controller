@@ -46,8 +46,8 @@ if __name__ == "__main__":
 	main()
 	try:
 		mqttc = mosquitto.Mosquitto()
-		mqttc.username_pw_set("mqttuser", "mqttpassword")
-		mqttc.connect("192.168.1.114", 1883, 60)
+		mqttc.username_pw_set(<user>, <password>)
+		mqttc.connect(<mqtt broker address>, 1883, 60)
 		mqttc.subscribe("garage/status", 0)	
 		
 		rc = 0
