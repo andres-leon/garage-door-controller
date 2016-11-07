@@ -1,0 +1,9 @@
+sensor garagedoor_status2:
+  - platform: mqtt
+    state_topic: "garage/status2"
+    name: "Garage Door Status2"
+    value_template: '{{ value_json.status }}'
+  - platform: mqtt
+    state_topic: "garage/status2"
+    name: "Garage Door Status last published2"
+    value_template: '{{ value_json.datetime_publised }}'
